@@ -1,11 +1,11 @@
 
 
 // color variables
-$yellow: #F3C25B;
-$teal: #83BAB2;
-$green: #8B9E74;
-$red: #831528;
 $grey: #414042;
+$blue: #214099;
+$teal: #1F7FC3;
+$green: #66BD5A;
+$lime: #CADD65;
 
 
 @import "reset";
@@ -34,13 +34,8 @@ $grey: #414042;
 // header styles
 header {
 	position: relative;
-	background: url(../img/bg-header.jpg) center center no-repeat;
-	background-size: cover;
-	text-align: right;
-	
-	.wrap {
-		max-width: 900px;
-	}
+	background: $blue url(../img/bg-header.jpg) top center repeat-x;
+	text-align: center;
 }
 
 
@@ -64,6 +59,13 @@ header {
 
 
 
+// colors
+.bg-blue { background: $blue; }
+.bg-teal { background: $teal; }
+.bg-green { background: $green; }
+
+
+
 // tool styles
 .tool {
 	padding: 0;
@@ -74,10 +76,8 @@ header {
 	}
 
 	.calculator {
-		background: url(../img/bg-box.png);
 		color: white;
-		padding: 20px 15px 30px;
-		margin-top: 30px;
+		padding: 10px 15px 10px;
 		@include font-title;
 
 		button, input[type=submit], .btn {
@@ -86,21 +86,13 @@ header {
 		}
 		
 		@include respond-to( 768px ) { 
-			padding: 30px 20px 40px; 
+			margin-top: 30px;
 			border-radius: 20px;
 			font-size: 1.2em;
-		}
 
-		@include respond-to( 1024px ) {
-			padding: 40px;
-		}
-	}
-
-	.half.right.first {
-		padding: 30px 10px;
-
-		@include respond-to( 1024px ) {
-			padding: 30px;
+			img {
+				margin-top: 20px;
+			}
 		}
 	}
 }
@@ -116,7 +108,6 @@ header {
 	// large title
 	h2 {
 		@include font;
-		color: $red;
 		font-size: 1.8em;
 
 		@include respond-to( 768px ) {
@@ -124,26 +115,55 @@ header {
 			padding: 10px 20px;
 		}
 	}
+}
 
-	h3 {
-		@include font;
-		font-size: 1.5em;
 
-		@include respond-to( 768px ) {
-			font-size: 2em;
-			padding: 10px 20px;
-		}
+
+// button styles
+input[type=submit], button, .btn {
+	@include font-title;
+	padding: 15px;
+	background: $lime;
+	color: $blue;
+	border: 0;
+	border-radius: 10px;
+	font-size: 2em;
+	line-height: 1.4em;
+	text-transform: uppercase;
+	display: block;
+	width: 100%;
+	cursor: pointer;
+	text-align: center;
+	position: relative;
+	margin-top: 10px;
+
+	span {
+		display: block;
+	}
+	
+	&:after {
+		content: "";
+		position: absolute;
+		right: 5px;
+		top: 50%;
+		width: 30px;
+		height: 30px;
+		margin-top: -15px;
 	}
 
-	p {
-		@include font-title;
-		font-size: 1.5em;
-		line-height: 1.5em;
+	&:hover {
+		opacity: .9;
+	}
 
-		@include respond-to( 768px ) {
-			font-size: 2em;
-			padding: 50px 20px 10px;
-		}
+	&.go-back {
+		background: lighten( $grey, 20% );
+		font-size: 1.5em;
+		color: white;
+	}
+
+	@include respond-to( 768px ) {
+		max-width: 50%;
+		margin: 10px auto;
 	}
 }
 
@@ -158,7 +178,7 @@ header {
 
 	h2, h4 {
 		&, a {
-			color: $red;
+
 		}
 
 		@include font-title;

@@ -2,7 +2,7 @@
 <html lang="en-US" class="no-js">
 <head>
 	<meta charset="utf-8">
-	<title>Afford Life - Harvest FCU</title>
+	<title>Afford Life - Duke University FCU</title>
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,40 +13,91 @@
 	<main class="container">
 		
 		<header>
-			<div class="wrap text-right">
-				<img src="img/header.png" class="header">
-			</div>
+			<img src="img/header.png" class="header">
 		</header>
 		
 		<div class="wrap">
+			
+
 			<div class="tool group">
-					
-				<div class="half right first">
-					<img src="img/content.png">
-				</div>
-				<div class="half right">
-					<div class="calculator box-bg">
-						<input type="hidden" class="rate_compare" value="1.74">
-						<p><label>Auto Loan Balance</label>
-							<input type="text" class="amount" placeholder="7,500"></p>
-						<p><label>Auto Loan Term (Months)</label>
-							<input type="text" class="term" placeholder="36m, 60m"></p>
-						<p><label>Your Current Rate</label>
-							<input type="text" class="rate" placeholder="7%"></p>
-						<p><button class="accrue-calculate">Calculate my Savings</button></p>
+				<h4 class="intro pad">Just tell us a little about your loans and we’ll show you how much you can save to afford your life!</h4>
+
+				<div class="loan-auto calculator bg-blue">
+					<div class="fourty">
+						<img src="img/rate-auto.png">
 					</div>
+					<div class="thirty">
+						<p><label for="amount">your current balance</label><input type="text" placeholder="7,500" class="amount" /></p>
+						<p><label for="rate">your current rate</label><input type="text" placeholder="8.99" class="rate percent" /></p>
+						<input type="hidden" class="rate_compare" value="1.49" />
+					</div>
+					<div class="thirty">
+						<p><label for="term">your current term</label>
+							<select class="term">
+								<option value="12m">12 mo.</option>
+								<option value="24m">24 mo.</option>
+								<option value="36m">36 mo.</option>
+								<option value="48m">48 mo.</option>
+								<option value="60m">60 mo.</option>
+								<option value="72m">72 mo.</option>
+								<option value="84m">84 mo.</option>
+							</select>
+						</p>
+					</div>
+					<div class="group"></div>
 				</div>
+
+				<div class="credit calculator bg-teal">
+					<div class="fourty">
+						<img src="img/rate-credit.png">
+					</div>
+					<div class="thirty">
+						<p><label for="amount">your current balance</label><input type="text" placeholder="3,500" class="amount" /></p>
+						<p><label for="rate">your current rate</label><input type="text" placeholder="14.5" class="rate percent" /></p>
+						<input type="hidden" class="term" value="12m" />
+						<input type="hidden" class="rate_compare" value="8.90" />
+					</div>
+					<div class="group"></div>
+				</div>
+				
+				<div class="loan-personal calculator bg-green">
+					<div class="fourty">
+						<img src="img/rate-personal.png">
+					</div>
+					<div class="thirty">
+						<p><label for="amount">your current balance</label><input type="text" placeholder="7,500" class="amount" /></p>
+						<p><label for="rate">your current rate</label><input type="text" placeholder="10.5" class="rate percent" /></p>
+						<input type="hidden" class="rate_compare" value="7.50" />
+					</div>
+					<div class="thirty">
+						<p><label for="term">your current term</label>
+							<select class="term">
+								<option value="12m">12 mo.</option>
+								<option value="24m">24 mo.</option>
+								<option value="36m">36 mo.</option>
+								<option value="48m">48 mo.</option>
+								<option value="60m">60 mo.</option>
+							</select>
+						</p>
+					</div>
+					<div class="group"></div>
+				</div>
+
+				<button class="calculate">Show me<br> the savings!</button>
 
 			</div>
 
 			<div class="results">
 
 				<h2>Congratulations!</h2>
-				<h3>You could save up to $<span class="result-amount"></span> in interest!</h3>
-				<p>Want to rock your loan payment?<br>
-					Give us a call at 740.522.5277!</p>
-				<div class="text-center">
-					<a class="button go-back">&laquo; go back</a>
+				<p>You could save up to <span class="result loan-total"></span> in Interest!</p>
+				<p>Save up to $<span class="result loan-auto"></span> on your Auto Loan.</p>
+				<p>Save up to $<span class="result credit"></span> on your Credit Card.</p>
+				<p>Save up to $<span class="result loan-personal"></span> on your Personal Loan.</p>
+				<p>Additional savings may be possible! Contact us for details.</p>
+				<div class="text-center pad">
+					<a class="btn apply">I'm ready to<br> Afford My Life!<span>Apply Now</span></a>
+					<a class="btn go-back">&laquo; go back</a>
 				</div>
 
 			</div>
@@ -56,10 +107,11 @@
 			<div class="wrap">
 
 				<div class="half separator">
-					<a href="http://harvestfcu.org/"><img src="img/logo.png"></a>
+					<a href="https://dukefcu.org/"><img src="img/logo.png"></a>
 				</div>
 				<div class="half">
 					<h2>740.522.5277</h2>
+					<h3><a href="https://dukefcu.org">dukefcu.org</a></h3>
 				</div>
 
 				<div class="fine-print group">
