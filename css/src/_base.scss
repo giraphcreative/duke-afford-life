@@ -57,6 +57,9 @@ h4 {
 	@include font;
 }
 
+strong {
+	@include font-bold;
+}
 
 input[type=text], select {
 	display: block;
