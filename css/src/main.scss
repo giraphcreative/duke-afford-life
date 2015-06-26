@@ -63,6 +63,7 @@ header {
 .bg-blue { background: $blue; }
 .bg-teal { background: $teal; }
 .bg-green { background: $green; }
+.bg-lime { background: $lime; }
 
 
 
@@ -123,8 +124,8 @@ header {
 input[type=submit], button, .btn {
 	@include font-title;
 	padding: 15px;
-	background: $lime;
-	color: $blue;
+	background: $green;
+	color: white;
 	border: 0;
 	border-radius: 10px;
 	font-size: 2em;
@@ -136,6 +137,7 @@ input[type=submit], button, .btn {
 	text-align: center;
 	position: relative;
 	margin-top: 10px;
+	box-shadow: 3px 3px 25px lighten( $grey, 35% );
 
 	span {
 		display: block;
@@ -161,9 +163,13 @@ input[type=submit], button, .btn {
 		color: white;
 	}
 
+	&.calculate, &.apply {
+		background: $green url(../img/bg-button-gradient.png) bottom center repeat-x;
+	}
+
 	@include respond-to( 768px ) {
-		max-width: 50%;
-		margin: 10px auto;
+		max-width: 40%;
+		margin: 30px auto;
 	}
 }
 
