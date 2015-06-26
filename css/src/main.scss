@@ -132,15 +132,16 @@ input[type=submit], button, .btn {
 	line-height: 1.4em;
 	text-transform: uppercase;
 	display: block;
-	width: 100%;
+	width: 90%;
 	cursor: pointer;
 	text-align: center;
 	position: relative;
-	margin-top: 10px;
+	margin: 10px auto;
 	box-shadow: 3px 3px 25px lighten( $grey, 35% );
 
 	span {
 		display: block;
+		font-size: 1.4em;
 	}
 	
 	&:after {
@@ -155,6 +156,7 @@ input[type=submit], button, .btn {
 
 	&:hover {
 		opacity: .9;
+		color: white;
 	}
 
 	&.go-back {

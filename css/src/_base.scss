@@ -3,7 +3,7 @@ body {
 	@include font;
 	font-size: 85%;
 	line-height: 1.5em;
-	color: $grey;
+	color: $blue;
 	background-color: #eee;
 	
 	@include respond-to( 1024px ) {
