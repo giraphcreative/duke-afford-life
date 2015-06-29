@@ -36,6 +36,10 @@ header {
 	position: relative;
 	background: $blue url(../img/bg-header.jpg) top center repeat-x;
 	text-align: center;
+
+	img {
+		display: block;
+	}
 }
 
 

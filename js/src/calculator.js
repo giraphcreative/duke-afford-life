@@ -55,6 +55,9 @@ $(function(){
 	$(".calculate").click(function(){
 		$(".tool").slideUp( 'slow' );
 		$(".results").slideDown( 'slow' );
+		$('html,body').animate({
+			scrollTop: $( "header img" ).height()
+        }, 800);
 	});
 
 	$(".go-back").click(function(){
