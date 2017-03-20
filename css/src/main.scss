@@ -63,6 +63,13 @@ header {
 
 
 
+.intro {
+	font-size: 2em;
+	text-transform: uppercase;
+}
+
+
+
 // colors
 .bg-blue { background: $blue; }
 .bg-teal { background: $teal; }
@@ -84,20 +91,21 @@ header {
 		color: white;
 		padding: 10px 15px 10px;
 		@include font-title;
-
-		button, input[type=submit], .btn {
-			width: 100%;
-			margin: 0 auto;
-		}
 		
 		@include respond-to( 768px ) { 
 			margin-top: 30px;
 			border-radius: 20px;
+			padding: 20px 15px;
 			font-size: 1.2em;
+		}
 
-			img {
-				margin-top: 20px;
-			}
+		label {
+			display: block;
+			padding-bottom: 8px;
+		}
+
+		.result {
+			line-height: 2em;
 		}
 	}
 }
@@ -144,7 +152,7 @@ input[type=submit], button, .btn {
 	color: white;
 	border: 0;
 	border-radius: 10px;
-	font-size: 2em;
+	font-size: 1.5em;
 	line-height: 1.4em;
 	text-transform: uppercase;
 	display: block;
@@ -153,7 +161,7 @@ input[type=submit], button, .btn {
 	text-align: center;
 	position: relative;
 	margin: 10px auto;
-	box-shadow: 3px 3px 25px lighten( $grey, 35% );
+	box-shadow: 3px 3px 25px rgba( black, .3 );
 
 	span {
 		display: block;
@@ -181,13 +189,15 @@ input[type=submit], button, .btn {
 		color: white;
 	}
 
-	&.calculate, &.apply {
+	&.calculate &.apply {
 		background: $green url(../img/bg-button-gradient.png) bottom center repeat-x;
 	}
 
-	@include respond-to( 768px ) {
-		max-width: 40%;
-		margin: 30px auto;
+	&.apply-mini {
+		background: $green url(../img/bg-button-gradient.png) bottom center repeat-x;
+		font-size: 1em;
+		width: 120px;
+		margin: 0 auto;
 	}
 }
 
@@ -237,7 +247,7 @@ input[type=submit], button, .btn {
 
 .fine-print {
 	background: white;
-	padding: 20px 0 0;
+	padding: 20px;
 	font-size: .85em;
 	line-height: 1.3em;
 	text-align: left;
