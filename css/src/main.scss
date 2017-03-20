@@ -199,6 +199,13 @@ input[type=submit], button, .btn {
 		width: 120px;
 		margin: 0 auto;
 	}
+
+	&.inline {
+		display: inline-block;
+		width: auto;
+		text-transform: none;
+		margin: 0 5px;
+	}
 }
 
 
