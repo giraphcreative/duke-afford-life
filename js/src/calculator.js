@@ -13,11 +13,7 @@ $(function(){
 		mode: "compare",
 		response_output_div: ".result.auto",
 		response_compare:"<strong>Payment: $%loan_2_payment_amount%/mo<br>Savings: $%savings%</strong>",
-		error_text:"<span>Enter loan info to see payment and savings.</span>",
-		callback: function( elem, data ){
-			console.log( elem );
-			console.log( data );
-		}
+		error_text:"<span>Enter loan info to see payment and savings.</span>"
 	});
 
 	$(".calculator.loan-personal").accrue({
