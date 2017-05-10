@@ -5,7 +5,7 @@ $(function(){
 	$(".calculator.credit").accrue({
 		response_output_div: ".result.credit",
 		response_basic:"<p><strong>Your payment:<br> $%payment_amount%/mo</strong></p>",
-		error_text:"<span>Enter balance info to see payment and savings.</span>",
+		error_text:"<span>Enter balance info to calculate your payment.</span>",
 		callback: function( elem, data ){
 			console.log( data );
 			if ( data != 0 ) {
@@ -19,7 +19,7 @@ $(function(){
 	$(".calculator.loan-auto").accrue({
 		response_output_div: ".result.auto",
 		response_basic:"<p><strong>Your payment:<br> $%payment_amount%/mo</strong></p>",
-		error_text:"<span>Enter loan info to see payment and savings.</span>",
+		error_text:"<span>Enter loan info to calculate your payment.</span>",
 		callback: function( elem, data ){
 			if ( data != 0 ) {
 				$('.result.auto').addClass( 'calculated' );
@@ -32,7 +32,7 @@ $(function(){
 	$(".calculator.loan-personal").accrue({
 		response_output_div: ".result.personal",
 		response_basic:"<p><strong>Your payment:<br> $%payment_amount%/mo</strong></p>",
-		error_text:"<span>Enter loan info to see payment and savings.</span>",
+		error_text:"<span>Enter loan info to see calculate your payment.</span>",
 		callback: function( elem, data ){
 			if ( data != 0 ) {
 				$('.result.personal').addClass( 'calculated' );
