@@ -3,12 +3,12 @@
 $(function(){
 
 	$(".calculator.credit").accrue({
-		mode: "compare",
 		response_output_div: ".result.credit",
-		response_compare:"<strong>Your Payment:<br> $%loan_1_payment_amount%/mo<br>Savings: $%savings%</strong>",
-		error_text:"<span>Enter loan info to see payment and savings.</span>",
+		response_basic:"<p><strong>Your payment:<br> $%payment_amount%/mo</strong></p>",
+		error_text:"<span>Enter balance info to see payment and savings.</span>",
 		callback: function( elem, data ){
-			if ( data.loan_1 != 0 ) {
+			console.log( data );
+			if ( data != 0 ) {
 				$('.result.credit').addClass( 'calculated' );
 			} else {
 				$('.result.credit').removeClass( 'calculated' );
@@ -17,12 +17,11 @@ $(function(){
 	});
 
 	$(".calculator.loan-auto").accrue({
-		mode: "compare",
 		response_output_div: ".result.auto",
-		response_compare:"<strong>Your Payment:<br> $%loan_1_payment_amount%/mo<br>Savings: $%savings%</strong>",
+		response_basic:"<p><strong>Your payment:<br> $%payment_amount%/mo</strong></p>",
 		error_text:"<span>Enter loan info to see payment and savings.</span>",
 		callback: function( elem, data ){
-			if ( data.loan_1 != 0 ) {
+			if ( data != 0 ) {
 				$('.result.auto').addClass( 'calculated' );
 			} else {
 				$('.result.auto').removeClass( 'calculated' );
@@ -31,12 +30,11 @@ $(function(){
 	});
 
 	$(".calculator.loan-personal").accrue({
-		mode: "compare",
 		response_output_div: ".result.personal",
-		response_compare:"<strong>Your Payment:<br> $%loan_1_payment_amount%/mo<br>Savings: $%savings%</strong>",
+		response_basic:"<p><strong>Your payment:<br> $%payment_amount%/mo</strong></p>",
 		error_text:"<span>Enter loan info to see payment and savings.</span>",
 		callback: function( elem, data ){
-			if ( data.loan_1 != 0 ) {
+			if ( data != 0 ) {
 				$('.result.personal').addClass( 'calculated' );
 			} else {
 				$('.result.personal').removeClass( 'calculated' );
