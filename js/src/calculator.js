@@ -32,7 +32,7 @@ $(function(){
 	$(".calculator.loan-personal").accrue({
 		response_output_div: ".result.personal",
 		response_basic:"<p><strong>Your payment:<br> $%payment_amount%/mo</strong></p>",
-		error_text:"<span>Enter loan info to see calculate your payment.</span>",
+		error_text:"<span>Enter loan info to calculate your payment.</span>",
 		callback: function( elem, data ){
 			if ( data != 0 ) {
 				$('.result.personal').addClass( 'calculated' );
